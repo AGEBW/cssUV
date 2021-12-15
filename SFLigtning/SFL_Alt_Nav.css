@@ -1,0 +1,67 @@
+/* ----------CSS THEME: Salesforce Lightning Style --------------- */
+/* ---------------Navigation Stylesheet Alt------------------- */
+/* The Navigation Menu stylesheet applies to all screens, including JET UI. 
+This stylesheet is intended to customize the display of the Alta navigation. 
+It will have no affect on the Legacy navigation. */
+
+/* IMPORTANT: When Alta Navigation is enabled, any custom scripts that are in the Header HTML need to be 
+moved to the HTML Head */
+
+/* Font face definitions */
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url("/assets/fonts/webfonts/SalesforceSans-Light.woff2") format("woff2"), url("/assets/fonts/webfonts/SalesforceSans-Light.woff") format("woff");
+  font-weight: 300; }
+
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url("/assets/fonts/webfonts/SalesforceSans-LightItalic.woff2") format("woff2"), url("/assets/fonts/webfonts/SalesforceSans-LightItalic.woff") format("woff");
+  font-style: italic;
+  font-weight: 300; }
+
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url("/assets/fonts/webfonts/SalesforceSans-Regular.woff2") format("woff2"), url("/assets/fonts/webfonts/SalesforceSans-Regular.woff") format("woff");
+  font-weight: 400; }
+
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url("/assets/fonts/webfonts/SalesforceSans-Italic.woff2") format("woff2"), url("/assets/fonts/webfonts/SalesforceSans-Italic.woff") format("woff");
+  font-style: italic;
+  font-weight: 400; }
+
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url("/assets/fonts/webfonts/SalesforceSans-Bold.woff2") format("woff2"), url("/assets/fonts/webfonts/SalesforceSans-Bold.woff") format("woff");
+  font-weight: 700; }
+
+@font-face {
+  font-family: "Salesforce Sans";
+  src: url("/assets/fonts/webfonts/SalesforceSans-BoldItalic.woff2") format("woff2"), url("/assets/fonts/webfonts/SalesforceSans-BoldItalic.woff") format("woff");
+  font-style: italic;
+  font-weight: 700; }
+  
+/*  Vertically center the site name that is displayed in the Global Header. 
+To change the contents and lettering of the site name, please use Global Header Branding editor.   */
+#cpq-alta-header > span{
+	align-items: center!important;
+}
+
+/*  Reduces the height of the Global Header by minimizing the amount of empty space above and below 
+the Global Navigation icons.  */
+#cpq-alta-header > span > img,
+#cpq-alta-header > span > p {
+    margin: 0 5px!important;
+}
+
+/*  This is an example of how to customize the icons used for Global Navigation shortcuts.   
+#cpq-alta-header #cpq-header-tb .cpq-nav-threepages[aria-labelledby="ui-id-4"] .cpq-nav-icon::before {
+content: url("../../image/Icons/CUSTOMICON1_ena.png")!important;
+}
+#cpq-alta-header #cpq-header-tb a.oj-hover[aria-labelledby="ui-id-4"] .cpq-nav-icon::before {
+content: url("../../image/Icons/CUSTOMICON1_hov.png")!important;
+}
+#cpq-alta-header #cpq-header-tb a.cpq-selected[aria-labelledby="ui-id-4"] .cpq-nav-icon::before {
+content: url("../../image/Icons/CUSTOMICON1_act.png")!important;
+}
+*/

@@ -1,0 +1,1019 @@
+/* ----------CSS THEME: SalesForce Lightning Style --------------- */
+/* ---------------Homepage Stylesheet Alt------------------- */
+/* The Homepage Stylesheet applies to the Login screen, with and without Guest Access enabled. 
+This also applies to the Product Selection screen, also called the Homepage. 
+This CSS file must be applied in the Home Page Setup area, along with the production.xsl, internal.xsl and 
+homepage.js files that should be included with this theme package. */
+
+/* In an effort to make customizations easier for our users, comments have been added throughout
+this document to assist in making changes. Below is a full list of the comments used, these mark
+the most common parameters to change for specific branding:     */
+
+/* Primary Font  */
+/* Primary Text Color  */
+/* Heading Text Color  */
+/* Link Color  */
+/* Primary UI Color  */
+/* Primary Border Style  */
+
+/*  Descriptions are also provided to indicate the purpose of the styling  */
+
+
+/* Basic Page and HTML Elements 
+------------------------------------------------------*/
+ 
+body {
+	font-family: "Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size:.875em;
+    color:#252525; /* Primary Text Color  */
+}
+
+body.logged-out.guest-access,
+body.logged-in {
+	background-image: url("../../image/images/sflightning_bg.png")!important;
+    background-repeat: repeat-x;
+    background-color: #b6c4de;
+    background-attachment: fixed; 
+}
+
+#wrapper {
+    background: transparent!important;
+}
+
+#wrapper {
+    width: calc(100% - 12px);
+}
+
+#wrapper-inner {
+    border: 1px solid #dddbda; /* Primary Border Style  */
+    margin: 10px auto;
+    padding: 0px;
+    border-radius: 3px;
+    background:  #fff;
+    text-align: left;
+    min-height: 400px;
+    position: relative;
+    width: 99% !important;
+    background: #f4f4f4;
+}   
+
+/* Footer
+------------------------------------------------------ */
+#footer {
+    background: #b6c4de;
+ /*   margin-left:  -25px;   */
+    margin-bottom: -35px;
+}
+
+#footer-inner {
+    width:  calc(100% - 20px);
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 180px;
+    background: #b6c4de;
+}
+
+.powered-by {
+    margin: 20px 0 0 0;
+    display: block;
+}
+
+/* Login screen and Homepage Header
+------------------------------------------------------ */
+.login-view > h1 {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    margin: 0;
+    z-index: 100;
+}
+
+#login-logo {
+    display:none;
+}
+
+.logged-out #footer img{
+    display:none;
+}
+
+.logged-out .extra-panes {
+    top: 0; left: 0px; bottom: 0; right: 0;
+    width:1200px !important;
+    height:100!important;
+}
+
+.logged-out #login-form-wrap {
+    background: #38a0d0;
+    background: url(../../image/images/bkgd.jpg) repeat scroll center bottom;
+    border-left: 1px solid dddbda; /* Primary Border Style  */
+    height: 304px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.logged-out #login-form {
+    padding-top:393px;
+    padding-left: -0px;
+    background: url(../../image/images/homepage_icon.png) no-repeat scroll;
+    background-position:23% 100%;
+    border: 0px solid #dddbda;
+    height:0px;
+    width: 97% !important;
+    z-index: 100 !important;
+	box-shadow: none;
+}
+
+#login-form-head {
+    position:absolute;
+    width:97%;
+    height:55px;
+    top: 0px;
+    margin-top:249px;
+}
+
+#login-form-head img{
+    margin-top: 425px;
+    margin-left:20%;
+    padding-bottom: 15px;
+    padding-left: 50%;
+    border-bottom:solid 1px #dddbda; /* Primary Border Style  */
+    margin-bottom: 10px;
+}
+
+#login-form .product-name {
+    border: 0px solid #ffffff;
+    color: #FFFFFF;
+    font-size: 48px;
+    font-weight: 400;
+    left: 42%;
+    letter-spacing: 0.01em;
+    position: absolute;
+    right: 20%;
+    text-align: left;
+    top: -80px;
+    width: 300px;
+    font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+}
+
+div.login-fields {
+    left: 42%;
+    position: absolute;
+    width: 400px;
+    height: 100%;
+    top:350px;
+}
+.login-fields > b { /* Login Failure text */
+    color: darkred;
+    font-size: 1.1rem;
+    position: absolute;
+    top: -20px;
+}
+
+div.login-button {
+    position: absolute;
+    left: 42%;
+    z-index: 15;
+    top: 545px;
+}
+div.login-links {
+    position: absolute;
+    left: 42%;
+    z-index: 15;
+    top: 495px;
+}
+.pipe {
+    padding: 0 6px;
+}
+
+#login-form .form-input {
+    line-height: 30px;
+    background: #FCFDFE !important;
+    border: 1px solid #dfe4e7;
+    border-radius: 2px !important;
+    width: 20%;
+    font-size: 13.5px;
+    color: #4f4f4f;
+    padding-left: 10px;
+}
+
+#login-form-wrap .login-toggle .hide {
+    display: none;
+}
+
+#login-form .login-button td img {
+    display: none;
+}
+
+#login-form label {
+    color: #757575;
+    display: block;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 16px;
+    margin: 13px 0 0;
+    padding: 0 0 5px;
+    width: 60px;
+}
+
+#login-form a{
+    color: #008193; /* Link Color  */
+}
+
+#login-form a:hover{
+    text-decoration: underline;
+}
+
+#login-form #psword {
+    margin-bottom: 10px;
+}
+
+#login-form select.form-input {
+    margin-bottom: 5px;
+}
+
+#login-form br {
+    display: none;
+}
+
+#login-form .form-input {
+    margin: 0px;
+    width: 300px;
+    clear: both;
+    min-height: 30px; /* IE 11 */
+}
+
+#login-form .login-links {
+    line-height: 13px;
+}
+
+.button-text {
+    text-decoration:none!important;
+}
+
+#login-form td.button-middle {
+    background:  #0572ce;
+    border: 1px solid #0572ce;
+    border-radius: 2px;
+    height: 48px;
+    font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-weight: 700;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+    height:48px;
+   padding-right:20px;
+   padding-left:20px;
+}
+#login-form td.button-middle div {
+    margin:0!important;
+}
+
+#login-form .button-middle a {
+    text-align: center!important;
+    background:  #0572ce;
+    color: #ffffff!important;
+    font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size: 20px!important;
+    font-weight: 400!important;
+    line-height: 48px!important;
+    margin: 0!important;
+    text-shadow: none;
+}
+#login-form .button-middle a:before,
+#login-form .button-middle a:after {
+
+}
+
+#login-form td.button-middle:hover,
+#login-form .button-middle a:hover{
+   background: #F7F8F9!important;
+   border: 1px solid #C4CED7!important;
+   color: #0572CE!important;
+}
+
+#login-form .button-middle:hover a{
+   background: #F7F8F9;
+   color: #0572CE;
+    border: 0px!important;
+}
+
+
+/*Login - Errors
+------------------------------------------------------ */
+ul.error-text {
+    left: 0;
+    padding: 5px 5px 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 20;
+}
+ul.error-text li {
+    background: #fFf4f4;
+    border: 1px solid rgba(34, 34, 34, 0.5);
+    border-radius: 3px;
+    box-shadow: 2px 2px 4px rgba(34, 34, 34, 0.5);
+    color: #880000;
+    font-size: 1.5em;
+    font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    margin: auto 25% 5px;
+    padding: 5px 10px;
+    text-align: center;
+}
+ul.error-text li:before {
+    content: url('/img/error.gif');
+    display: inline-block;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+}
+
+/*Login - Guest Access
+------------------------------------------------------ */
+.guest-access .extra-panes  {
+    display: block;
+    position: absolute;
+    top: 20px;
+    width: 100% !important;
+    padding: 0;
+    margin: 0;
+    visibility: hidden;
+    z-index: 1002 !important;
+    float: none;
+}
+.guest-access .extra-panes form {
+    width: 960px;
+    margin: 0 auto;
+    display: block;
+    visibility: hidden;
+    z-index: 1001 !important;
+    position: relative;
+}
+
+.guest-access .main-pane {
+    margin: 0;
+	background-image: url("../../image/images/sflightning_bg.png")!important;
+    background-repeat: repeat-x;
+    background-color: #b6c4de;
+    background-attachment: fixed; 
+}
+
+.guest-access.logged-out #login-form {
+    padding-top:393px;
+    padding-left: -0px;
+    background-position: 50% 20%;
+}
+
+.guest-access.logged-out #login-form-wrap {
+    visibility: visible;
+    z-index: 1000 !important;
+    height: 708px;
+    left: 250px;
+    width: 440px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
+    background: #38a0d0!important;
+}
+
+.guest-access div.login-fields {
+    position:absolute;
+    z-index:10;
+    width:410px;
+    height:274px;
+    left:0px;
+    top:334px;
+    padding: 80px 10px 0px 20px;
+    background: #ffffff;
+}
+.guest-access div.login-button{
+    top:600px;
+    left: 15px;
+}
+
+.guest-access div.login-links{
+    top:560px;
+    left: 15px;
+}
+
+.guest-access #login-form-head img{/*Oracle Logo*/
+    top: -30px;
+    left:-1px;
+    position: absolute;
+    z-index: 50;
+    border: 0;
+}
+
+.guest-access #login-form .product-name {
+    width: 300px;
+    left: 70px;
+    right: 20%;
+    position: absolute;
+    top: 90px;
+    z-index: 200;
+}
+
+.guest-access .pipe { padding: 0 6px; }
+
+.guest-access #login-form {
+    margin: 0 0;
+    padding-top:320px;
+}
+
+.guest-access #login-form-wrap .login-toggle {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    height: 16px;
+    width: 16px;
+    border:5px solid #ffffff;
+    background: #FFFFFF url(../../image/Icons/close_button.png) no-repeat right top;
+    cursor: pointer;
+    z-index:1005;
+}
+.guest-access #login-form-wrap .login-toggle:hover {
+    background-position: right -16px;
+}
+
+.guest-access #login-form-wrap .login-toggle .hide {
+    display: none;
+}
+
+.guest-access #login-form-wrap {
+    display: none;
+}
+
+/*  Homepage Styling: Toolbar and buttons - Part Search, Return to Quote, Login for guest access, Search Box popup
+------------------------------------------------------ */
+
+/* Login and Return To Quote buttons*/
+/* ------------------------------------------------------ */
+#search-login-toggle-wrapper a, .return-to-quote a {
+    background-color: #FFFFFF;
+    background-image: none;
+    border: solid #dddbda 1px; /* Primary Border Style  */
+    display: block;
+    float: left;
+    padding: 0 10px;
+    margin: 0 -7px 0 3px;
+    border-radius: 2px;
+	-moz-border-radius: 2px; 	
+	-webkit-border-radius: 2px;  
+	font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+	font-size: 13px!important;
+	font-weight: 400!important;
+    color:#0070d2!important; /* Primary UI Color  */
+    line-height: 28px;  
+    text-decoration: none;
+}
+
+#search-login-toggle-wrapper a:hover {
+	background-color: #f4f6f9!important;
+	border: 1px solid #c4ced7!important;
+}
+
+#search-login-toggle-wrapper {
+    float: right;
+    padding: 0;
+    margin: 1px 5px 5px;
+    white-space: nowrap;
+    position: relative;
+    top: 8px;
+    right: 3px;
+    z-index: 2;
+}
+
+#search-login-toggle-wrapper span.pipe{
+    display: none!important;
+}
+
+.return-to-quote,
+.return-to-quote-pipe {
+    display:none !important;
+}
+
+/* Search Buttons */
+#search-login-toggle-wrapper .parts-search-toggle,
+#search-login-toggle-wrapper .serial-num-search-toggle  {
+    margin: 0 4px;
+    padding-left: 30px;
+    background: #ffffff url(../../image/Icons/func_magnify_ena.png) no-repeat 5px;
+    font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size:12px;
+    font-weight: 400;
+    color: #0070d2; /* Primary UI Color  */
+    text-decoration: none;
+    border: solid #dddbda 1px; /* Primary Border Style  */
+    -webkit-justify-content: center;
+    justify-content: center;
+    min-width: 0;
+    -webkit-align-items: center;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 2px;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#search-login-toggle-wrapper .parts-search-toggle:hover,
+#search-login-toggle-wrapper .serial-num-search-toggle:hover  {
+    background: #f4f6f9 url(../../image/Icons/func_magnify_ena.png) no-repeat 5px;
+    border-color: #c4ced7;
+    color: #0070d2; /* Primary UI Color  */
+}
+
+
+#search-wrapper .parts-search-toggle,
+#serial-search-wrapper .serial-num-search-toggle  {
+    float: right;
+    height: 16px;
+    width: 16px;
+    background: transparent url(../../image/Icons/close_button.png) no-repeat;
+    cursor: pointer;
+}
+
+#search-wrapper .parts-search-toggle:hover,
+#serial-search-wrapper .serial-num-search-toggle:hover {
+    background-position: 0 -16px
+}
+
+div.search-button-wrapper {
+    margin: 6px 4px 6px 2px;
+    background-color: transparent;
+    background-image: linear-gradient(#f1f3f4, #e4e8ea);
+    border: 1px solid #c4ced7;
+    color: #0070d2; /* Primary UI Color  */
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+}
+
+/* Search Box popup
+------------------------------------------------------ */
+
+#search-outer-wrapper,
+#serial-search-outer-wrapper {
+    margin: 0 0px 0 0;
+    padding: 5px 23px 12px 10px;
+    z-index: 100;
+    box-shadow: 5px 5px 20px #999999;
+    background: #FFFFFF;
+    border: 1px solid #dddbda; /* Primary Border Style  */
+}
+
+#search-outer-wrapper, #serial-search-outer-wrapper {
+    display: none;
+    position: absolute;
+    right:  0;
+    top: 0;
+    padding: 5px 5px 0px 0px;
+}
+
+#search-wrapper,
+#serial-search-wrapper {
+    float: left;
+    width: auto;
+    padding-left: 10px;
+    margin-top: 7px;
+    position: relative;
+}
+#search-wrapper h3,
+#serial-search-wrapper h3 {
+    float: left;
+    color: #454545; /* Primary Text Color */
+    padding: 0 0 2px 0;
+    margin: 0 0 2px 0;
+}
+
+div.search-input-wrapper {
+    border: 1px solid #dddbda;/* Primary Border Style  */
+    height: 24px;
+    margin: 6px 0px;
+    background: #fff;
+}
+
+#simple-search, #serial-number {
+    line-height: 20px;
+    padding: 1px;
+    font-size: 12px;
+    border: none;
+    margin: 1px;
+    width: 140px;
+}
+#serial-number {
+    width: 178px;
+}
+
+#price-book {
+    height: 20px;
+    padding: 2px 1px 2px 0;
+}
+
+#price-book select {
+    background: #fff !important;
+    border: solid 1px #666666; /* Secondary Color */
+    margin-top: 4px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 12px;
+    padding: 0 0 0 2px;
+}
+
+#search-top-wrapper,
+#serial-search-top-wrapper  {
+    width: 100%;
+}
+#search-bottom-wrapper,
+#serial-search-bottom-wrapper  {
+    clear: both;
+}
+
+#search-wrapper .hide,
+#serial-search-wrapper .hide  {
+    display: none;
+}
+.search-element-wrapper {
+    display: flex;
+}
+#search-wrapper div,
+#serial-search-wrapper div  {
+    float: left;
+}
+
+.search-button-wrapper input.button {
+    background: url(../../image/Icons/func_magnify_ena.png) no-repeat center 3px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    top: 1px;
+    width: 22px;
+}
+
+div.search-button-wrapper input.button:hover {
+    background: #f7f8f9 url(../../image/Icons/func_magnify_hov.png) no-repeat center 3px;
+}
+
+div.search-button-wrapper input.button:active {
+    background: #0572ce url(../../image/Icons/func_magnify_act.png) no-repeat center 3px;
+    border-color: #0572ce!important;
+}
+
+.search-button-wrapper input.button::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+
+.multiple-search,
+.advanced-search {
+    font-size: 11px;
+    height: 16px;
+    line-height: 16px;
+    margin: 7px 8px 7px 0;
+    clear: both;
+    display: block;
+    color: #145c9e;
+}
+.multiple-search:hover,
+.advanced-search:hover {
+    text-decoration: underline;
+    color: #145c9e;
+}
+
+.visually-hidden{
+    display: none;
+}
+
+/* Product Family Tabs
+--------------------------------------------- */
+
+#family-nav {
+    background: #FFFFFF;
+    border-color: #FFFFFF #FFFFFF #dddbda #FFFFFF!important; /* Primary Border Style  */
+    border: 1px solid; /* Primary Border Style  */
+    display: block;
+    margin: 48px 0 0 0;
+    padding: 0;
+    width: unset;
+}
+
+#family-nav li {
+    float: none;
+    list-style: none;
+    margin-bottom: -4px;
+}
+
+#family-nav > li > a {
+    color: #080707; /* Link Color  */
+    height: 36px;
+    line-height: 36px;
+    padding: 0px 20px;
+    margin: 0px 5px 0 0;
+    text-decoration: none;
+    font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size: 14px!important;
+    font-weight: 400;
+    border-bottom: 2px solid transparent;
+}
+#family-nav > li.active > a,
+#family-nav > li.active > a:hover{
+    border-bottom: 3px solid #0070D2; /* Primary UI Color  */
+    padding-top: 0px;
+    font-weight: 700;
+}
+
+#family-nav > li > a:hover {
+    border-bottom: 2px solid #0070D2;
+    background: none repeat scroll 0 0 #FFFFFF!important;
+    padding-top: 1px;
+}
+
+#family-nav > li > a.active {
+    padding: 0px 8px 0px 8px;
+    margin: 0px 5px 0 0;
+    border-bottom: 3px solid #0070D2!important; /* Primary UI Color  */
+    text-decoration: none;
+    font-weight: 700;
+}
+
+ul.dropdown > li > a {
+    display: block;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    margin-bottom: -1px;
+    margin-left: 5px;
+    padding: 0px 10px;
+}
+
+
+/* Hide Sub Indicator on Product Family dropdown */
+/* ------------------------------------------------------ */
+.sf-sub-indicator{
+    display:none;
+}
+
+/* Product Line headings
+------------------------------------------------------*/
+.product-line-description {
+    margin-bottom: 5px;
+    width: 100%;
+	text-align: center;
+}
+
+.associated-files {
+    text-align: left;
+}
+
+.product-content {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex: 1;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.product-content h2 {
+    color: #080707; /* Heading Text Color  */
+    font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size: 16px;
+    font-weight: 400;
+    border-bottom: 2px #0070d2 solid; /* Primary UI Color  */
+}
+.pl-expando-hdr {
+    cursor: pointer;
+    clear: both;
+    border: solid #d9dfe3;
+    border-width: 0 0 1px;
+    color: #080707; /* Heading Text Color  */
+    font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size: 16px;
+    font-weight: 400!important;
+    padding: 10px 0; 
+}
+
+a.pl-expando {
+    display: inline-block;
+    margin-right: 5px;
+    overflow: hidden;
+    vertical-align: text-bottom;
+}
+a.pl-expando:before {
+    content: url(../../image/Icons/arrow-expand.png);
+    display: inline-block;
+}
+
+a.pl-expando.expanded:before {
+    content: url(../../image/Icons/arrow-collapse.png);
+}
+
+/* Model and Selector Content
+------------------------------------------------------ */
+ul.dropdown {
+    position: relative;
+    margin: 0 10px;
+}
+
+ul.dropdown li {
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Dropdown - Level Two items */
+ul.dropdown ul {
+    width: auto;
+    max-width: 550px;
+    height: auto;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    top: 99%;
+      border: 1px solid #c4ced7;
+}
+
+ul.dropdown ul li {
+    font-weight: normal;
+    color: #000000;
+    float: none;
+    font-size: 12px;
+    display: block;
+    height: auto;
+}
+ul.dropdown li:hover > ul {
+    visibility: visible;
+}
+
+/* Dropdown -Inactive Tab items*/
+ul.dropdown ul li a {
+    background: #FFFFFF;
+    border: 0px solid #c4ced7;
+    width: auto;
+    display: block;
+    line-height: 20px;
+    padding: 3px 8px;
+    color: #000000;
+    text-decoration: none!important;
+}
+
+ul.dropdown li ul li a:hover {
+    background: #ebeced!important;
+    color: #000000;
+    text-decoration: none!important;
+}
+
+/* Dropdown - Active Tab items*/
+ul.dropdown li.active ul li a {
+    background: #FFFFFF;
+    text-decoration: none!important;
+}
+
+ul.dropdown li.active ul li a:hover {
+    background: #ebeced;
+    color: #000000;
+    text-decoration: none!important;
+}
+
+/* Dropdown - Level Three items*/
+ul.dropdown ul ul {
+    left: 100%;
+    top: 0;
+}
+
+ul.dropdown li li a {
+    min-width: 150px;
+    display: block;
+    white-space: nowrap;
+    text-decoration: none!important;
+}
+
+/* Dropdown - Documents */
+ul.dropdown li li.doc a{
+    padding-left: 25px;
+    padding-left: 10px !important!;
+}
+
+ul.dropdown li li.doc-head {
+    border-top: solid 2px;
+    -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15) inset;
+    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15) inset;
+}
+ul.dropdown li li.doc-head a {
+    cursor: default;
+    padding-left: 10px !important;
+    font-weight: 700;
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.4);
+}
+
+ul.dropdown li li.doc-head a:hover {
+    background: none repeat scroll 0 0 transparent;
+}
+
+ul.dropdown li li.doc a{
+    padding-left: 25px;
+}
+
+/* Model Details - Added for GSE demo environments */
+
+.model {
+    font-size: 12px;
+    line-height: 1.5em;
+    float: left;
+    min-height: 245px;
+    margin: 10px auto;
+    padding: 10px;
+    min-width: 200px;
+    flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    box-sizing: border-box;
+    max-width: 350px;
+    text-align: center;
+}
+
+.model-summary-wrapper { 
+    margin: 10px;
+    padding: 10px;
+}
+
+.model h3 a {
+    font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size:14px;
+    font-weight: 400;
+    text-decoration: none; 
+    background-color: #ffffff;
+    background-image: none;
+    border: solid #ddddba 1px;
+    color: #0070d2; /* Primary UI Color  */
+    -webkit-justify-content: center;
+    justify-content: center;
+    min-width: 0;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 4px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 2px;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.model h3 a:hover {
+    background: #f4f6f9;
+    border-color: #c4ced7;
+    color: #0070d2; /* Primary UI Color  */
+}
+
+.model-summary {
+    width: 200px;
+    display: inline-block;
+    font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size:12px;
+    color: #080707;
+}
+
+.img-wrapper {
+    display: block !important!; /* IE7 */
+    padding-top: 10px !important!; /* IE7 */
+    height: 190px !important!; /* IE7 */
+    display: block;
+    text-align: center;
+    border: solid 1px white;
+}
+
+.img-wrapper img {
+    max-width: 200px;
+    max-height: 200px;
+    vertical-align: middle;
+}
+
+.product-family-content {
+
+}
+
+:-moz-focusring {
+    outline: 2px solid rgba(5, 114, 206, 0.5);
+}
+
+/* Product Content
+------------------------------------------------------ */
+#content {
+    padding: 0px 15px 30px 15px;
+    background: #fff;
+    margin-top: -12px;
+}
+
+.featured-image {
+    padding: 5px;
+    border: solid 1px #fff;
+    float: right;
+}

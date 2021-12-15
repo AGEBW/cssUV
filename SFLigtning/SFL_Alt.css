@@ -1,0 +1,1514 @@
+/* -------------CSS THEME: SalesForce Lightning CPQ Cloud----------------- */
+/* ---------------Legacy UI Stylesheet ---------------------- */
+
+/* This Stylesheet applies to only Legacy UI for buyside screens. It affects Legacy Configuration, 
+Transaction Manager, and Legacy Transaction UI.  */
+
+/* In an effort to make customizations easier for our users, comments have been added throughout
+this document to assist in making changes. Below is a full list of the comments used, these mark
+the most common parameters to change for specific branding:     */
+
+/* Primary Font  */
+/* Primary Text Color  */
+/* Heading Text Color  */
+/* Link Color  */
+/* Primary UI Color  */
+/* Primary Border Style  */
+
+/*  Descriptions are also provided to indicate the purpose of the styling  */
+
+/* Basic Page and HTML Elements 
+------------------------------------------------------*/
+ 
+html {
+	font-family: "Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+	background: #FFFFFF;
+	color: #3e3e3c; /* Primary Text Color  */
+}
+
+body {
+	margin:0 auto;
+	background: #ffffff;
+}
+
+body.model-config {
+	background: #ffffff;
+}
+
+body, td, p { 
+    text-decoration: none; 
+    color: #3e3e3c; /* Primary Text Color  */
+	font-size:12px;
+	font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+	font-weight: normal;
+}
+
+a {  
+    text-decoration: none;
+}
+
+div.main-pane{
+	background-color: #FFFFFF;
+}
+
+.clearfix {
+    *zoom:1; /* IE<8 */
+}
+.clearfix:after { 
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/*  --- GENERAL TEXT --- */
+/* ------------------------------------------------------ */
+.general-text { 
+    font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size: 11px; 
+    color: #000000;
+}
+a.general-text:link, a.general-text:visited { 
+    text-decoration: underline; 
+    color: #0070d2; /* Link Color  */
+}
+a.general-text:hover, a.general-text:visited:hover { 
+    color: #005fb2;  /* Link Color  */
+	text-decoration: underline;
+}
+
+.tree:link, .tree:visited { 
+    color: #0070d2; /* Link Color  */
+    font-size: 11px; 
+}
+a.tree:hover, a.tree:visited:hover { 
+    color: #0070d2; /* Link Color  */
+    font-size: 11px; 
+    text-decoration: underline; 
+}
+
+div.qs_header {
+    border-bottom: 1px solid #dddbda; /* Primary Border Style  */
+    margin: 0 0 10px 5px;
+}
+
+.qs_header span{
+	font-size: 14px; 
+	color: #000000;
+	font-weight: 400;
+	font-family: "Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+}
+
+.help-icon {
+   display: inline-block;
+   width: 14px;
+   height: 14px;
+   padding-right: 4px;
+   background: url(/img/bmx/icons/help.gif) no-repeat;
+}
+
+.help-popup,
+.pricebook-constraint {
+    position: absolute;
+    padding: 8px;
+    background-color: #FFFFFF;
+    border: 1px solid #dddbda; /* Primary Border Style  */
+	-moz-border-radius: 3px; 	
+	-webkit-border-radius: 3px;  
+	border-radius: 3px;
+    float: left;
+    max-width: 300px;
+    max-height: 200px;
+    overflow: auto;
+    opacity: 0;
+    -webkit-box-shadow: 3px 3px 6px #999999;
+    box-shadow: 3px 3px 6px #999999;
+    -webkit-transition: opacity 0.2s ease 0s;
+    -moz-transition: opacity 0.2s ease 0s;
+    transition: opacity 0.2s ease 0s;
+}
+
+.column {
+    white-space: nowrap;
+}
+
+/* Attribute form inputs and labels
+-------------------------------------------------------------*/
+.view-text, 
+.form-input, 
+.form-input select, 
+.form-input-modified, 
+.form-input-selected, 
+.form-input-mouseover,
+.form-item input, 
+.form-item select, 
+.form-item textarea, 
+.form-item .menu-attr label,
+.attribute-field, 
+.cfg-image-menu {
+	font-family: "Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size: 12px; 
+    color: #3e3e3c; /* Primary Text Color  */
+    font-weight:normal;
+}
+.view-text-number, 
+.form-input-number {  
+	font-family: "Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size: 12px; 
+    color: #3e3e3c; /* Primary Text Color  */
+    text-align: right; 
+}    
+.view-text:link, 
+.view-text:visited { 
+    color: #0070d2; /* Link Color  */
+}
+a.view-text:hover, 
+a.view-text:visited:hover { 
+    color: #005fb2; 
+    text-decoration: underline; 
+}
+.view-label, 
+.form-label, 
+.form-item label { 
+	font-family: "Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size: 12px; 
+    color: #3e3e3c; /* Primary Text Color  */
+    font-weight:normal;
+    text-align: left;
+} 
+
+.view-label-200px { 
+	font-family: "Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size: 12px; 
+    color: #3e3e3c; /* Primary Text Color  */
+    font-weight:bold;
+    padding-left: 1px; 
+    width: 200px;
+}
+.view-number { 
+	font-family: "Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size: 12px; 
+    color: #3e3e3c; /* Primary Text Color  */
+    font-weight:normal;
+    text-align: right; 
+}
+
+.attribute-label {
+	font-family:"Salesforce Sans", Arial, sans-serif!important; /* Primary Font  */
+    font-size: 12px!important;
+    color: #3e3e3c!important; /* Primary Text Color  */
+	font-weight: 400!important;
+}
+
+.required .attribute-label {
+	font-family:"Salesforce Sans", Arial, sans-serif!important; /* Primary Font  */
+    font-size: 12px!important;
+    color: #3e3e3c!important; /* Primary Text Color  */
+	font-weight: 700!important;
+}
+
+/* Required Attribute Label Properties */
+.required .attribute-label {
+    font-weight: 700!important;
+}
+
+/* Toolbar / Actionstrip Fixes */
+/* ------------------------------------------------------ */
+.button-bar {
+    margin: -10px -10px  3px -10px!important;
+    padding: 0!important;
+    height: 41px!important;
+}
+
+#sticky-actions {
+	padding: 3px 10px;
+}
+
+#sticky-actions .floating,
+div.bm-actionstrip.fixed, div.bm-actionstrip.floating {
+    border: solid #FFFFFF 0px!important; 
+    background: #FFFFFF!important;
+    padding: 3px 0;
+    margin: 0;
+}
+
+#sticky-actions .bm-actionstrip-horiz,
+#sticky-actions .bm-actionstrip-horiz.floating {
+    background: #FFFFFF!important;
+    border: solid #FFFFFF 0px!important; 
+    padding: 3px 0;
+    margin: 0;
+}
+
+#sticky-actions .bm-actionstrip-horiz.floating {
+    border-bottom: 1px solid #dddbda!important; /* Primary Border Style  */
+	-moz-box-shadow: 0 5px 5px #999999;
+	-webkit-box-shadow: 0 5px 5px #999999;
+	box-shadow: 0 2px 2px 0px rgba(0, 0, 0, .25);
+}
+
+/* Button styling
+-------------------------------------------------------*/
+.button-left, .button-right { 
+	display: none!important; /* hide button sides used in original table buttons */
+} 
+ 
+#sticky-actions td.button-middle,
+.bm-actionstrip-horiz td.button-middle,
+td.button-middle { 
+    background-color: #FFFFFF;
+    background-image: none;
+    border: solid #dddbda 1px; /* Primary Border Style  */
+    color: #0070d2; /* Primary UI Color  */
+	display: block;
+	position: relative;
+	border-radius: 2px;
+	-moz-border-radius: 2px; 	
+	-webkit-border-radius: 2px;  
+    height: 30px;
+    margin: 0px;
+}
+
+#sticky-actions td.button-middle:active ,
+.bm-actionstrip-horiz td.button-middle:active,
+td.button-middle:active { 
+    background: #005fb2!important;
+    background-image: none;
+    border-color: #005fb2!important;
+}
+
+#sticky-actions .button-middle:hover,
+.bm-actionstrip-horiz .button-middle:hover,
+td.button-middle:hover { 
+	background: #f4f6f9!important;
+	border: 1px solid #c4ced7!important;
+}
+
+#sticky-actions  .button-middle a,
+.bm-actionstrip-horiz  .button-middle a,
+.button-middle a {
+	outline: none;
+	-moz-outline-style: none;
+	margin: 0px 8px;
+    text-align: center; 
+	font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+	font-size: 13px!important;
+	font-weight: 400!important;
+    color:#0070d2!important;  /* Primary UI Color  */
+    line-height: 28px;    
+	display: block;
+}
+
+#sticky-actions td.button-middle:active a,
+.bm-actionstrip-horiz td.button-middle:active a,
+td.button-middle:active a{
+	margin: 0px 8px!important;
+	color:#FFFFFF!important;
+    text-decoration: none;
+}
+
+#sticky-actions .button-middle:hover a,
+.bm-actionstrip-horiz .button-middle:hover a,
+td.button-middle:hover a{
+	margin: 0px 8px!important;
+	color: #0070d2!important; /* Primary UI Color  */
+    text-decoration: none;
+}
+
+.button-middle div { 
+	margin: 0px!important;  /*overrides .js inline click movement */
+	padding: 0!important;
+} 
+
+.button-text, .button-text:link, .button-text:visited {
+    position: relative;
+    top: 0px;
+}
+/* Format Button Icons */
+.button-middle a img {
+	margin: -8px 0 0 2px; /* The top margin is minus half height of the image (16px). */
+	position: absolute;
+	top: 50% !important;
+}
+
+.button-middle a {
+	padding: 0 0 0 0px;
+	background-position: 0 center;
+	background-repeat: no-repeat;
+}
+
+/* Hide Button Icons
+.button-middle a img {
+    display: none;
+}
+
+.button-middle a {
+	padding: 0!important;
+}
+*/
+
+/* Panels, Groups and Headings
+-------------------------------------------------------*/
+.model-config .group-header {
+	font-size: 14px; 
+	color: #080707; /* Heading Text Color  */
+	font-weight: 400;
+	font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+	background: transparent!important;
+	border-bottom: 1px solid #dddbda; /* Primary Border Style  */
+	line-height: 32px;
+    margin: 5px;
+}
+.model-config  .group-header:hover{
+
+}
+
+/* Adds arrow icon to indicate collapsable groups within config */
+.model-config  .group-content .group-header span{
+   padding-left: 16px;
+   background: url("image/images/discloseexpanded_16x_ena.png") no-repeat 0 50%;
+}
+
+.model-config  .group-content.collapsed .group-header span{
+   padding-left: 16px;
+   background: url("image/images/disclosecollapsed_16x_ena.png") no-repeat 0 50%;
+}
+
+.model-config  .group-content.collapsed .group-header:hover span,
+.model-config  .group-content.collapsed .group-header span:hover,
+.model-config  .group-content .group-header span:hover,
+.model-config  .group-content .group-header:hover span{
+  color: #005fb2;
+}
+
+.group-content{
+	border:1px solid #ffffff;
+    border-radius: 2px;
+}
+
+.panel .panel-tc, 
+.panel .panel-tl, 
+.panel .panel-tr, 
+.panel .panel-mr, 
+.panel .panel-ml, 
+.panel .panel-bc, 
+.panel .panel-bl,
+.panel .panel-br{
+    background: #FFFFFF!important; /* Secondary Color */
+	border:0px solid #ffffff!important; /* Secondary Color */
+}
+.panel {
+    border-top:1px solid #dddbda!important; /* Primary Border Style  */
+    border-radius: 0px;
+}
+
+.panel .panel-heading {
+    font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-weight: 400;
+    font-size: 14px!important; 
+    color: #080707!important; /* Heading Text Color  */
+}
+
+.panel-body {
+	font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size: 12px; 
+    color: #080707;
+}
+
+.panel.collapsible span.panel-heading{    
+	background: url("image/images/arrow-collapse.png") no-repeat scroll 0px transparent;
+    padding-left: 15px;
+	padding-right: 3px;
+}
+
+.panel-collapsed span.panel-heading{    
+	background: url("image/images/arrow-expand.png") no-repeat scroll 0px transparent !important;
+    padding-left: 15px;
+	padding-right: 3px;
+}
+
+.toggle-panel {
+    display:none!important;
+}
+
+/* Tab styling 
+-----------------------------------------------------------*/
+.tab-content {
+    border:0px;
+}
+
+ul.tab-strip {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #dddbda!important; /* Primary Border Style  */
+    padding: 0 0 0 4px;
+    margin-bottom: 10px;
+}
+
+.tab-inner, 
+.tab-right {
+    background: none repeat scroll 0 0 transparent !important;
+}
+
+.tab-strip li{ 
+    margin-bottom: -1px; 
+    padding: 0 2px;
+}
+.model-config .column {
+    white-space: normal;
+}
+
+.tab-strip a.tab-left {
+    background: none repeat scroll 0 0 transparent;
+	border-radius: 0 0;
+}
+
+.tab-strip .tab-text {
+	padding: 0px;
+	color: #080707;
+	font-size: 14px!important;
+	font-weight: normal;
+	text-decoration: none!important;
+}
+
+.tab-strip .tab-text,
+.tab-strip a.tab-left {
+	height: 36px;
+	line-height: 38px;
+	text-decoration: none!important;
+}
+
+.tab-strip .tab-left{
+    border-left: #ffffff solid 1px;
+	border-right: #ffffff solid 1px;
+	border-top: #ffffff solid 1px;
+    border-bottom: 1px #FFFFFF solid;
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+
+.tab-strip .tab-active a.tab-left,
+.tab-strip .tab-active a.tab-left:hover{ 
+	border-left: #ffffff solid 1px;
+	border-right: #ffffff solid 1px;
+	border-top: #ffffff solid 1px;
+    border-style: solid;
+    border-bottom: 3px #0070D2 solid; /* Primary UI Color  */
+    background: none repeat scroll 0 0 #FFFFFF;
+  	height: 36px;
+	line-height: 36px;
+	text-decoration: none!important;
+}
+
+.tab-strip a.tab-left:hover { 
+    background: none repeat scroll 0 0 #FFFFFF!important;
+    border-bottom: 2px #0070D2 solid; /* Primary UI Color  */
+}
+
+.tab-strip a.tab-left:hover .tab-text { 
+	color: #080707;
+	text-decoration: none!important;
+}
+.tab-strip .tab-active a.tab-left .tab-text,
+.tab-strip .tab-active a.tab-left:hover .tab-text{
+	color: #080707;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+/* ------- Configuration specific styling  --------*/
+/* --------------------------------------------------------*/
+ .model-config .body-inner {
+    border:1px solid #FFFFFF!important;
+    border-radius: 2px;
+	Margin: 10px auto;
+    background: #FFFFFF;
+     max-width: 1174px;
+ }
+ .configuration-form {
+	 
+ }
+ #main-table-wrapper {
+    margin: 0 auto;
+}
+
+#main-content {
+    width: 100%;
+}
+
+
+ #config-header {
+	font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-weight: 400;
+    font-size: 18px; 
+    color: #080707; /* Heading Text Color  */
+    position: absolute;
+	top: 66px;
+	z-index: 1500;
+ }
+#sticky-actions .grand-total-container{
+    float: none!important;
+    position: absolute;
+    right: 320px;
+    top: 8px;
+}
+.grand-total-container {
+	font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-weight: 400!important;
+    font-size: 14px!important; 
+    color: #080707; /* Heading Text Color  */
+}
+
+#config-section{
+	border-top: 1px solid #dddbda; /* Primary Border Style  */
+}
+
+/* Array Table Properties */
+.array {
+    background-color: #FFFFFF;
+    border-collapse: separate;
+    border-color: #dddbda #f4f4f4!important; /* Primary Border Style  */
+}
+
+.array td {
+    background-color: #FFFFFF;
+}
+
+.array thead th {
+    border: solid 1px; 
+    border-color: #dddbda #f4f4f4; /* Primary Border Style  */
+    background: #f4f4f4!important;
+    height: 18px;
+	background: #f4f4f4;
+    color: #080707!important;  /* Heading Text Color  */
+    font-weight: 400;
+    font-size: 12px!important; 
+    text-transform: uppercase;
+    line-height: 16px;
+}
+
+.array td, .array th {
+    border: solid #dddbda; /* Primary Border Style  */
+    border-width: 0 0 1px 0px;
+    background-color: #fff;
+    padding: 3px 6px;
+    vertical-align: middle;
+}
+
+.array .constrained-row td, .array .constrained-row th,
+.array .recommended-row td, .array .recommended-row th,
+.array .previous-value-row td, .array .previous-value-row th {
+    border-bottom-color: #dddbda; /* Primary Border Style  */
+}
+
+.array tr td.recommended,
+.array tr td.constrained,
+.array tr td.previous-value {
+    background-color: #fff8e5;
+    border: solid #dddbda; /* Primary Border Style  */
+    border-width: 3px 0 0 1px;
+}
+
+.array td.recommended + td,
+.array td.constrained + td,
+.array td.previous-value + td {
+    border-left: 1px solid #dddbda; /* Primary Border Style  */
+}
+
+.array th[scope=row],
+.vertical-array th {
+    text-align: left;
+}
+
+.vertical-array th[scope=row],
+.vertical-array .array-remove-cell {
+    width: 1px;
+}
+
+.array-add, 
+.array-remove {
+    text-indent: -9999px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    background: transparent center center;
+}
+
+.horizontal-array .array-remove {
+    float: right;
+    margin-left: -16px;
+    opacity: 0;
+    -webkit-transition: opacity 0.1s ease 0s;
+    -moz-transition: opacity 0.1s ease 0s;
+    transition: opacity 0.1s ease 0s;
+}
+
+.horizontal-array th:hover .array-remove {
+    opacity: 1;
+}
+
+.array tr.selected th,
+.array tr.selected td {
+    background-color: #B9DFFF;
+}
+
+
+.array .even td, 
+.array .even th {
+    background-color: #f4f4f4!important;
+}
+
+.array tr td.previous-value {
+    border-top-color: #dddbda; /* Primary Border Style  */
+}
+
+.array tr td.recommended {
+    border-top-color: #0000FF;
+}
+
+.array tr td.constrained {
+    border-top-color: #FF0000;
+}
+
+/* ---MANDATORY/REC ITEMS PANELS --- */
+/* ------------------------------------------------------ */
+form {
+	background:#FFFFFF;
+}
+
+.side-bar-content div#pricing-table-wrapper.items-table-wrapper .items-header,
+.side-bar-content div#recommendation-section #mandatory-parts-wrapper.items-table-wrapper .items-header{
+	
+}
+
+.side-bar-content {
+    width: ;
+    padding: 10px;
+}
+
+.side-bar-content #pricing-table-wrapper{
+/*    width: 450px; */
+	border: 0px solid #dddbda; /* Primary Border Style  */
+}
+.side-bar-content div#pricing-table-wrapper.items-table-content,
+.items-table-wrapper{
+/*    width: 450px; */
+	border: 0px solid #FFFFFF!important;
+}
+#recommendation-section{
+/*    width: 450px; */
+	border: 1px solid #dddbda; /* Primary Border Style  */
+    padding: 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.side-bar-content #pricing-table-wrapper .items-table-content,
+.side-bar-content #recommendation-section .items-table-content{
+    max-width: 450px;
+	border: 0px solid #ffffff!important;
+    padding: 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#recommendation-section .items-table-content .spare-grid{
+    width: ;
+	border: 1px solid #dddbda; /* Primary Border Style  */
+    padding: 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.side-bar-content .main-model {
+    width: ;
+    background: transparent;
+    margin: 10px;
+}
+
+.view-header, 
+.form-header { 
+	font-family: "Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+	background: #f4f4f4;
+    color: #080707!important;  /* Heading Text Color  */
+    font-weight: 400;
+    font-size: 12px!important; 
+    text-transform: uppercase;
+    padding-left: 3px;  
+}
+
+.items-header {
+    position: relative;
+    height: 26px;
+    margin: 12px 0 0 0;
+    width: ;
+	border: 1px solid #dddbda!important; /* Primary Border Style  */
+}
+
+tr.view-header td.list-label{
+    border-bottom: 1px solid #FFFFFF;
+}
+
+
+/* Pipeline Viewer */
+/* ------------------------------------------------------ */
+
+#pipeline-viewer-opener {
+    background-color: transparent;
+    text-align: right;
+}
+
+#pipeline-viewer-opener a{
+    color: #454545;
+	font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+}
+
+/* --- Transaction Manager Styling --- */
+/* ------------------------------------------------------ */
+.bmTooltip {
+    position: absolute; 
+    display:none; 
+    border: solid 1px #dddbda; /* Primary Border Style  */
+    background-color: #F0F0F0;
+    padding: 5px;
+}
+
+/* top bar properties */
+
+.display-block {
+	display:block;
+}
+
+#top-bar-wrapper { 
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddbda; /* Primary Border Style  */
+    padding: 5px;
+} 
+
+#content-wrapper { 
+    background-color: #FFFFFF;
+    border: 1px solid #dddbda; /* Primary Border Style  */
+    border-radius: 15px 15px 0 0;
+    margin: 0 auto!important;
+	padding: 0;
+} 
+
+#bottom-bar-wrapper,
+#content { 
+    background-color: #FFFFFF;
+} 
+
+.top-bar { 
+    background-color: #F0F0F0;
+    color: #080707; 
+    font-size : 14px;
+	font-family:"Salesforce Sans", Arial, sans-serif!important; /* Primary Font  */
+    font-weight: 700; 
+    font-style: normal;  
+} 
+
+.top-bar:link, .top-bar:visited { 
+    background-color: #F0F0F0;
+    color: #0070d2; /* Primary Link Color */
+    font-size : 12px;
+	font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-weight: 700; 
+    font-style: normal;
+} 
+
+a.top-bar:hover{
+  text-decoration: underline;
+}
+
+/* for top bar and folder tabs*/ 
+a.top-bar:hover, a.top-bar:visited:hover { 
+    color: #0070d2; /* Primary Link Color */
+}
+
+.top-bar-on, .top-bar-on:link, .top-bar-on:visited { 
+    background-color: #F0F0F0; 
+    color: #0070d2; /* Primary Link Color */
+    font-size : 9px;
+	font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-weight: 700;
+    font-style: normal; 
+}
+
+/* for SELECTED folder tab*/ 
+a.top-bar-on:hover, a.top-bar-on:visited:hover { 
+    color: #005fb2; /* Primary Link Color */
+}
+
+/* bottom bar properties */
+.bottom-bar, .bottom-bar:link, .bottom-bar:visited { 
+    background-color: #FFFFFF;
+    color: #0070d2;  /* Primary Link Color */
+    font-size : 9px;
+	font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    text-align : right;
+    font-style: normal;
+    font-weight: 400;
+	padding: 0 5px;
+}
+
+td.bottom-bar {
+	border-top: 1px solid #dddbda; /* Primary Border Style  */
+}
+
+td.bottom-bar .bottom-bar,
+.top-bar .bottom-bar {
+	border: 0px solid #dddbda; /* Primary Border Style  */
+}
+
+a.bottom-bar,
+a.bottom-bar:hover, 
+a.bottom-bar:visited:hover { 
+	color: #0070d2; /* Primary Link Color */
+	text-decoration: underline;
+}
+
+.top-bar, 
+.top-icon-bg-color,
+.top-left-icon {
+    background-color: #FFFFFF;
+}
+
+.top-icon-bg-color img,
+.top-left-icon img,
+.top-bar img,
+.bottom-bar img{
+	display: none;
+}
+
+/* sidebox bar properties */
+.sidebox-bar { 
+    background-color: #f4f4f4;
+    color: #000000; 
+    font-size : 10px; 
+	font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-weight: 700; 
+}    
+/* Popups */
+.popup {
+    position: fixed;
+    left: 50%;
+    top: 100px;
+    z-index: 999;
+}
+
+.popup.modal {
+    z-index: 1002;
+}
+
+.popup-header {
+    padding: 15px 22px 6px 6px;
+}
+
+.popup-title,.popup-header img {
+    vertical-align: middle;
+}
+
+.popup-content {
+    padding: 16px 6px;
+    overflow: auto;
+}
+
+.popup-footer {
+    padding: 6px;
+    text-align: right;
+    position:relative;
+}
+
+.popup-footer .bm-button {
+    display: inline-block;
+    margin-left: 3px;
+    position:relative;
+    display: inline !ie;
+}
+
+.popup-footer .button-middle img {
+    display: none;
+}
+
+.popup-footer .ok-button a {
+	padding: 0 5px 0 22px;
+	background: url("image/Icons/icon-check.png") no-repeat 0 50%;
+}
+
+.popup-footer .cancel-button a {
+	padding: 0 5px 0 22px;
+	background: url("image/Icons/icon-close.png") no-repeat 0 50%;
+}
+.popup-footer .cancel-button .button-middle {
+	background-color: transparent;
+    background-image: #e4e8ea; /* For browsers that do not support gradients */
+    background-image:-webkit-linear-gradient(#f1f3f4, #e4e8ea); /* For Safari 5.1 to 6.0 */
+    background-image:-o-linear-gradient(#f1f3f4, #e4e8ea); /* For Opera 11.1 to 12.0 */
+    background-image:-moz-linear-gradient(#f1f3f4, #e4e8ea); /* For Firefox 3.6 to 15 */
+    background-image:linear-gradient(#f1f3f4, #e4e8ea); /* Standard syntax */
+    border: 1px solid #c4ced7;
+}
+
+.popup-header {
+	background: #f4f4f4;
+    border:1px solid #dddbda; /* Primary Border Style  */
+}
+  
+.popup-header .popup-title {
+    color: #000000;
+    font-weight: 700;
+	font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size: 14px;
+	margin-left: 5px;
+}
+  
+.popup-content {
+    border-width: 1px!important;
+    border: solid #dddbda;  /* Primary Border Style  */
+    background-color: #fff;
+	font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+	font-size: 12px;
+	padding: 20px 10px 30px 10px;
+}
+  
+.popup-footer {
+    border: 1px solid #dddbda; /* Primary Border Style  */
+    border-top: none;
+    background-color: #FFFFFF;
+}
+  
+.popup-form .field-label {
+	font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size: 11px; 
+    color: #000000; 
+    font-weight: 700; 
+    text-align: left; 
+}
+  
+.popup-form .error .field-label {
+    color: #FF0000; 
+    font-style: normal; 
+    font-weight: 400; 
+}
+
+.popup-close {
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background-image: url(/img/gxt/tool-sprites-gray.gif);
+	overflow: hidden;
+}
+
+#document-form {
+    border: solid #FFFFFF 0px; 
+    background: #ffffff;
+    padding: 0px;
+    margin:0px 0px;
+}
+
+#cm-manager-content .x-grid3-hd-row td {
+	border: 1px solid!important;	
+    border-color: #dddbda #f4f4f4!important;	/* Primary Border Style  */
+}
+
+#cm-manager-content .x-grid3-row{
+	border: 1px solid #dddbda; /* Primary Border Style  */
+}
+
+#cm-manager-content .x-grid-table-bg-color{
+	background-color:#FFFFFF;
+}
+
+#cm-manager-content .x-grid-td-tab-name {
+    font-weight: 700;
+    padding: 3px;
+}
+
+#cm-manager-content .x-grid-group-hd{
+	border: 0 0 1px 0!important;
+	border-bottom: 1px solid #FFFFFF !important;	
+    padding-top:0px;
+    cursor:auto;
+}
+#cm-manager-content .x-grid3-hd-inner{
+	font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    color: #000000; 
+    font-size: 11px; 
+    background-color: #f4f4f4;
+    font-weight: 700; 
+    padding-left: 3px;  
+    text-align:left;
+	vertical-align: middle;
+}
+.rowBorder{
+    border:0px ;
+}
+
+#cm-manager-content .x-grid-group-hd div { 
+    background:none;
+    padding : 0px;
+    cursor:auto;
+    font-weight: 700; 
+    font-style: normal;
+	font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+}
+
+.x-grid3-hd-row a{
+    color: #000000!important; 
+	text-decoration: none!important;
+}
+	
+.cm-group-tab{
+    background: transparent;
+}
+
+.cm-group-tab ul{
+	font-family:"Salesforce Sans", Arial, sans-serif!important; /* Primary Font  */
+    font-size : 8px !important;
+    font-weight: 700 !important; 
+    font-style: normal !important;
+}
+
+.cm-group-tab li{
+    background: #e4e8ea url(/img/gxt/rounded_gradient-tab-inner.png) repeat-x scroll 0 -1px;
+}
+
+
+.cm-group-tab a{
+    color: #000000;
+    background: transparent url(/img/left_top_tab8x20.gif) no-repeat left top;
+}
+
+.cm-group-tab a span{
+    background: transparent url(/img/right_top_tab8x20.gif) no-repeat right top;
+    padding: 6px 8px 3px 7px;
+}
+
+#cm-manager-content .x-grid3-cell-inner {
+    color: #000000; 
+    font-size: 11px; 
+	font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+}
+
+#cm-manager-content .x-grid3-row-alt {
+    background-color: #F0F0F0;
+}
+#cm-manager-content td.x-grid3-hd-over .x-grid3-hd-inner, 
+td.sort-desc .x-grid3-hd-inner, 
+td.sort-asc .x-grid3-hd-inner, 
+td.x-grid3-hd-menu-open .x-grid3-hd-inner {
+    background: #EEEEEE repeat-x scroll left bottom; 
+}
+
+#cm-manager-content .x-grid3-row-selected {
+    background-color: #B9DFFF;
+}
+#cm-manager-content .hover {
+    background-color: #ebeced; 
+}
+#cm-manager-content .x-grid3-row-selected.hover {
+    background-color: #ebeced;
+}
+
+#cm-manager-content .x-grid3-header {
+    background-color: #f4f4f4;
+    color: #000000; 
+	border: 1px solid #dddbda!important;	/* Primary Border Style  */
+}
+
+/* --- LISTS --- */
+/* ------------------------------------------------------ */
+
+.list-label, .list-label:link, .list-label:visited { 
+    background-color: #FFFFFF;
+	font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+	border: 0px solid #dddbda; /* Primary Border Style  */
+    color: #080707!important;  /* Heading Text Color  */
+    font-weight: 400;
+    font-size: 12px!important; 
+    text-transform: uppercase;
+}
+
+#partSearchResultsGrid .list-label,
+tr.view-header .list-label, 
+tr.view-header .list-label:link, 
+tr.view-header .list-label:visited{
+    background-color: #f4f4f4;
+    color: #080707!important;  /* Heading Text Color  */
+    font-weight: 400;
+    font-size: 12px!important; 
+    text-transform: uppercase;
+}
+
+a.list-label:hover, a.list-label:visited:hover { 
+    background-color: #EEEEEE;
+    color: #0070d2; /* Link Color  */
+    font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size: 12px; 
+	border: 0px solid #666666;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+th.list-label.col-part_number {
+	text-align: left;
+}
+
+th.list-label.col-description {
+	text-align: left;
+}
+
+.list-field { 
+    font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size: 11px; 
+    color: #000000;
+}
+
+.form-input-selected, 
+.bgcolor-list-even-selected, 
+.bgcolor-list-odd-selected {
+    background-color: #f0f0f0; 
+} 
+
+tr.adv-grid-row:hover,
+.line-item-grid-wrapper .line-item-hover,
+.form-input-mouseover, 
+.bgcolor-list-even-mouseover, 
+.bgcolor-list-odd-mouseover {
+    background-color: #F9F9F9!important;
+} 
+
+.bgcolor-list-even{
+    background-color: #F9F9F9;
+    height: 20px;
+}
+
+a.col-part_number:hover, 
+a.col-part_number:visited:hover 
+.toggle-search a:hover, 
+.toggle-search a:visited:hover,
+a.list-field:hover, 
+a.list-field:visited:hover,
+a.list-field-new:hover, 
+a.list-field-new:visited:hover { 
+    color: #0070d2; /* Link Color  */
+}
+
+.toggle-search a,
+.list-field:link, 
+.list-field:visited,
+.list-field-new, 
+.list-field-new:link, 
+.list-field-new:visited { 
+    font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size: 11px; 
+    color: #0070d2; /* Link Color  */
+    text-decoration: underline; 
+}
+
+.auto-update-highlight {
+    background-color: #B9DFFF;
+    background-image: none;
+}
+
+.empty-link {
+    font-style: italic; 
+    /** For empty links in commerce manager grid. **/
+}
+
+/* Legacy Commerce */
+/* ------------------------------------------------------ */
+
+/* Line Item Grid */
+/* ------------------------------------------------------ */
+#line-item-grid-body {
+}
+#line-item-grid tr.parent-line-item > td { 
+    border-width: 0 0 1px 0;
+}
+
+#line-item-grid .parent-line-item:hover td { 
+	background-color: #ffffff; 
+}
+
+#line-item-grid td {
+	border: solid #dddbda; /* Primary Border Style  */
+	border-width: 0 0 1px 0!important;
+	padding: 3px 3px;	
+}
+
+#line-item-grid .child-line-item td{
+	background-color: #FFFFFF!important; 	
+}
+
+.child-line-item:hover td {
+	background-color: #FFFFFF; 
+}
+
+#line-item-grid td td, 
+#line-item-grid th td{
+	border: none;
+	padding: 3px 3px;
+}
+
+#line-item-grid .action-icon-bar div {
+	padding: 0;
+	margin-top: 3px;
+	height: 12px;
+}
+
+#line-item-grid { 
+	border-collapse: collapse; 
+	border: #dddbda solid 0px!important; /* Primary Border Style  */
+}
+
+.line-item-grid-header th { 
+	padding: 4px 4px; 
+	border: #dddbda solid 1px!important; /* Primary Border Style  */
+	border-bottom: #dddbda solid 1px!important; /* Primary Border Style  */
+    background: #f4f4f4!important;
+    color: #000000!important;
+    font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-weight: 700!important;
+	line-height: 24px;
+}
+
+.line-item div div {
+	line-height: 24px;
+}
+
+.line-item div.boolean-wrapper-inner{
+	margin-top: 3px;
+}
+
+.line-item div.text-wrapper-inner {
+	margin-top: 1px;
+}
+
+.line-item-grid-footer th{ 
+    border-top: 2px solid #FFFFFF!important; 
+    border-bottom: 0px solid #dddbda!important; /* Primary Border Style  */
+    padding: 5px 5px; 
+    font-family:"Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+    font-size: 14px!important; 
+    color: #000000!important; 
+    font-weight: 700;
+}
+
+td.checker{ 
+	text-align: center;
+}
+
+td.checker input {
+	margin-top: 7px;	
+}
+
+.line-item-grid-wrapper .child-line-item .checker input {
+	float: right;
+	margin-left: 26px;
+}
+
+#line-item-grid .line-item-show .reorder-icon {
+	left: inherit;
+	position: relative;
+	width: 6px;
+	margin-top: 1px;
+}
+
+.line-item-grid-wrapper .line-item .collapsible,
+.line-item-grid-wrapper .line-item .collapsible.collapsed {
+	position: relative;
+	float: left;
+	margin: 6px 0 0 -1px;			
+	cursor: pointer;
+	height: 13px;
+	width: 13px;
+	background-position: center center !important;
+}
+
+/*  LIG Pagination */
+/* ------------------------------------------------------ */
+.column .paging-tools{ 
+	text-align: center; 
+	font-size: 12px; 
+}
+
+.paging-tools { 
+	margin-top: 15px; 
+}
+
+span.pagination-button-left,
+span.pagination-button-right{ 
+	visibility: hidden; 
+	padding: 0; 
+	display: none;
+} 
+
+.paging-tools .first-page,
+.paging-tools .prev-page,
+.paging-tools .paging-status,
+.paging-tools .next-page,
+.paging-tools .last-page { 
+	visibility: visible; 
+}
+.paging-status { 
+	margin: 0 10px 0 6px; 
+}
+.paging-tools a.paging-tool-disabled {
+	color: #9e9e9e!important;
+
+}
+
+div.page-number ul.paging li button.pagingbtn.current {
+	border: 1px solid #4f4f4f;
+}
+
+.paging-tools span a,
+span.pagination-button-middle {
+	padding: 3px 6px!important;
+	text-decoration: none;
+	font-family: "Salesforce Sans", Arial, sans-serif!important; /* Primary Font  */
+    font-size: 12px; 
+    font-weight:400;
+	-moz-border-radius: 2px; 	
+	-webkit-border-radius: 2px;  
+	border-radius: 2px;
+	-webkit-background-clip: padding-box; /* Fixes border bleed in webkit */
+	background-clip: padding-box !important;
+	-moz-background-clip: padding !important;
+    background-color: #ededee;
+    background-image: none;
+    border-color: #cbcccd;
+    color: #000000;
+	height: 18px;
+}
+
+.paging-tools select.selpaging {
+height: 30px!important;
+}
+
+.paging-tools span a:hover,
+.pagingbtn:hover  span.pagination-button-middle { 
+	background-color: #f7f8f9!important;
+	border: 1px solid #0070d2!important; /* Primary UI Color  */
+    color: #0070d2;
+}
+.paging-tools span a:active,
+span.pagination-button-middle:active { 
+    background-color: #0070d2!important; /* Primary UI Color  */
+    background-image: none;
+    border-color: #0070d2!important; /* Primary UI Color  */
+	background-position: 0 -310px; 
+	color: #FFFFFF!important;
+}
+
+/* --- Search Parts Page ---*/
+/* ------------------------------------------------------ */
+#search-results-header {
+    border-color: #dddbda; /* Primary Border Style  */
+    border-style: solid;
+    border-width: 0 0 2px 0;
+}
+
+#search-results-list{
+    margin: 25px auto 0 auto!important;
+}
+#search-results-list table,
+table.adv-grid {
+    border: 1px solid #dddbda!important; /* Primary Border Style  */
+    width: 925px;
+}
+
+.adv-parts-options {
+    border-top: 1px solid #dddbda!important; /* Primary Border Style  */
+}
+
+#search-results-list table th,
+#search-results-list table td,
+td.adv-grid -cell{
+	border: solid #dddbda!important; /* Primary Border Style  */
+	border-width: 0 0 1px 0!important;
+}
+
+/* Overlay and Loading dialog */
+.overlay {
+    background-color: #FFFFFF!important;
+}
+
+#loading-dialog {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    margin: 0px;
+    padding: 0px;
+    width: 80px;
+    height: 80px;
+    background: url("image/images/sfdc_icon.gif") no-repeat!important;
+    border: none!important;
+    box-shadow: none;
+    text-align: center;
+    z-index: 1001;
+}
+
+#loading-dialog img{
+    display: none!important;
+}
+
+/* System Navigation */
+
+#system-navigation + #main-content {
+    display: inline-block;
+    padding-left: 5px;
+    width: calc(100% - 230px)!important;
+    border-left: 1px solid #D6DFE6;
+}
+
+#system-navigation {
+    width: 220px!important;
+}
+
+#system-navigation {
+    border-right: 1px solid #FFFFFF!important;
+    width: 220px!important;
+}
+
+#system-navigation ul {
+    padding: 8px 0 0 0;
+}
+
+#system-navigation li, 
+#system-navigation a {
+    font-family:"Segoe UI","Helvetica",Arial,sans-serif!important; /* Primary Font  */
+    font-size: 10pt!important;
+    line-height: 14pt!important;
+}
+
+#system-navigation span.active-config {
+    font-weight: bold;
+    outline: 1px solid #145c9e;
+    background-color:#BFD4E5;
+    padding: 3px!important;
+}
+
+#system-navigation li.system-navigation-model {
+    background: url("image/images/qual_nodes_16_full.png") no-repeat!important;
+}
+
+#system-navigation li.system-navigation-model {
+    background-size:16px 16px!important;
+    padding-left: 5px;
+    margin-top: 8px;
+}
+
+#system-navigation li.system-navigation-model a:hover {
+text-decoration: underline!important;
+}
+
+#system-navigation li.system-navigation-part {
+    padding-left:20px!important;
+	background: url("image/images/arrowdownright.png") no-repeat!important;
+    background-size:16px 16px!important;
+    color:#333333;
+}

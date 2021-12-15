@@ -1,0 +1,364 @@
+/* -------------CSS THEME: Salesforce Lightning CPQ Cloud----------------- */
+/* ---------------JET UI Stylesheet ---------------------- */
+
+/* The JET Stylesheet applies to only JET UI for buyside screens.  */
+
+/* In an effort to make customizations easier for our users, comments have been added throughout
+this document to assist in making changes. Below is a full list of the comments used, these mark
+the most common parameters to change for specific branding:     */
+
+/* Primary Font  */
+/* Primary Text Color  */
+/* Heading Text Color  */
+/* Link Color  */
+/* Primary UI Color  */
+/* Primary Border Style  */
+
+/*  Descriptions are also provided to indicate the purpose of the styling  */
+
+/* Basic Page and HTML Elements 
+------------------------------------------------------*/
+
+html {
+  font-family: "Salesforce Sans", Arial, sans-serif; /* Primary Font  */
+}
+
+body {
+	background-image: url("image/images/sflightning_bg.png")!important;
+    background-repeat: repeat-x;
+    background-color: #b6c4de;
+    background-attachment: fixed; 
+}
+
+#main-panel {
+    border-radius: 0 0 8px 8px;
+	border-color: #f4f4f4!important; /* Primary Border Style  */    
+}
+
+#transaction #main-panel {
+    margin-top: 116px!important;
+}
+
+.oj-header-border{
+border-color: #f4f4f4!important; /* Primary Border Style  */    
+}
+
+/* Toolbars and Headings
+-------------------------------------------------------*/
+#top-toolbar {
+    background: #b6c4de;
+	background-image: url("image/images/sflightning_bg.png")!important;
+    border-radius: 8px 8px 0 0;
+}
+
+#configuration #top-toolbar {
+    background-position: 0px 160px; 
+}
+
+#top-toolbar #top-toolbar-spacer {
+    background-image: url("image/images/sflightning_bg.png")!important;
+    background-position: 20px 160px; 
+    background-repeat: repeat;
+    background-color: #b6c4de;
+}
+
+#configuration #top-toolbar .oj-toolbar,
+#top-toolbar #top-toolbar-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+/*	min-height: 42px;  */
+    padding: 10px 20px;
+    border-radius: 8px 8px 0 0;
+    background: #f4f4f4; 
+	border: 1px solid #f4f4f4; /* Primary Border Style  */}
+
+#top-toolbar-wrapper h2{
+	text-align: left;
+    color: #080707!important;  /* Heading Text Color  */
+    font-weight: 400;
+    font-size: 18px!important; 
+    text-transform: none;
+    background: #f4f4f4;
+    
+}
+
+.oj-collapsible-header{
+	text-align: left;
+    color: #080707!important;  /* Heading Text Color  */
+    font-weight: 400;
+    font-size: 16px!important;
+    text-transform: none;
+    background: #f4f4f4;
+    padding: 5px 15px;
+    margin-left: -10px;
+	border: 1px solid #f4f4f4!important; /* Primary Border Style  */
+    border-radius: 4px;
+}
+
+.oj-expanded .oj-collapsible-header-icon::before {
+    content: url("image/images/expanded_ena.png")!important;
+    padding-right: 8px;
+}
+
+.oj-collapsed .oj-collapsible-header-icon::before {
+    content: url("image/images/collapsed_ena.png")!important;
+}
+
+.oj-expanded .oj-hover .oj-collapsible-header-icon::before {
+    content: url("image/images/expanded_hov.png")!important;
+}
+
+.oj-collapsed .oj-hover .oj-collapsible-header-icon::before {
+    content: url("image/images/collapsed_hov.png")!important;
+}
+
+/* Styles toolbars that contain labels for use as content headings  */
+.panel-col .toolbar-with-label{
+    height: 33px;
+	padding: 0px 10px 0 0; 
+    margin: 0 5px 10px 0;
+}
+
+.panel-col  .toolbar-with-label .toolbar{
+	padding: 0px 10px 0 0; 
+    height: 32px;
+}
+
+.toolbar-with-label .oj-label-group{
+	text-align: left;
+    color: #080707!important;  /* Heading Text Color  */
+    font-weight: 700;
+    font-size: 14px!important; 
+}
+
+.toolbar-with-label .oj-label {
+    flex-basis: 100px;
+}
+
+/* Panel styling
+-------------------------------------------------------------*/
+.oj-panel {
+    border: 0px solid #ffffff;
+}
+
+/* Button styling
+-------------------------------------------------------*/
+.oj-button-jqui.oj-default.oj-button-full-chrome, 
+.oj-button-jqui.oj-focus-only.oj-button-full-chrome, 
+.oj-button.oj-default.oj-button-full-chrome .oj-button-button, 
+.oj-button.oj-focus-only.oj-button-full-chrome .oj-button-button {
+    background-color: #FFFFFF;
+    background-image: none;
+    border-color: #dddbda; /* Primary Border Style  */
+	color: #0070d2; /* Primary UI Color  */
+}    
+
+.oj-button-label{   
+	font-size: 14px!important;
+	font-weight: 400!important;
+}
+
+/* Attribute form inputs and labels
+-------------------------------------------------------------*/
+
+.input-form-control .oj-label,
+.input-form-control .oj-label-nocomp{
+    color: #3e3e3c; /* Primary Text Color  */
+    font-size: 11px;
+    font-weight: 400;
+	font-family: "Salesforce Sans", Arial, sans-serif!important; /* Primary Font  */
+} 
+
+.oj-read-only span {
+    padding-right: 10px;
+}
+
+.oj-label{
+    white-space: nowrap;
+}
+.oj-inputnumber.oj-read-only .oj-inputnumber-input, 
+.oj-inputtext.oj-read-only .oj-inputtext-input, 
+.oj-inputdatetime.oj-read-only .oj-inputdatetime-input,
+.oj-inputpassword.oj-read-only .oj-inputpassword-input, 
+.oj-textarea.oj-read-only .oj-textarea-input, 
+.oj-inputtext-nocomp[readonly], 
+.oj-inputpassword-nocomp[readonly], 
+.oj-textarea-nocomp[readonly],
+.oj-inputtext, 
+.oj-inputpassword, 
+.oj-textarea, 
+.oj-inputtext-nocomp, 
+.oj-inputpassword-nocomp, 
+.oj-textarea-nocomp{
+    font-size: 14px!important;
+    color: #000000!important;
+}
+
+.oj-form-control:NOT(.oj-read-only) .oj-inputtext-input,
+.oj-form-control:NOT(.oj-read-only) .oj-inputpassword-input,
+.oj-form-control:NOT(.oj-read-only) .oj-textarea-input,
+.oj-form-control:NOT(.oj-read-only) .oj-inputtext-nocomp,
+.oj-form-control:NOT(.oj-read-only) .oj-inputpassword-nocomp,
+.oj-form-control:NOT(.oj-read-only) .oj-textarea-nocomp,
+.oj-form-control:NOT(.oj-read-only) .oj-select-choice,
+.oj-form-control:NOT(.oj-read-only) .oj-combobox-choice,
+.oj-form-control:NOT(.oj-read-only) .oj-inputdatetime-input,
+.oj-form-control:NOT(.oj-read-only) .oj-inputdatetime-input-trigger,
+.oj-form-control:NOT(.oj-read-only) .oj-inputnumber-input{
+    border-color: #dddbda!important;
+    border-width: 0 0 1px 0!important;
+    border-style: solid!important;
+    background-color: #FFFFFF;
+}
+
+.oj-form-control .oj-panel {
+	border: 1px solid #dddbda;
+	border-radius: 3px;
+}
+
+.oj-form-control .oj-panel.oj-selected {
+	border: 2px solid #0070D2;/* Primary UI Color  */
+}
+
+/* Tab styling 
+-----------------------------------------------------------*/
+.oj-tabs-horizontal .oj-tabs-tab,
+.oj-tabbar-horizontal .oj-tabbar-item {
+    border-width: 0 0 3px 0!important;
+    border-radius: 0 0 0 0;
+    font-size: 14px;
+  	height: 36px;
+    padding-top: 1px;
+}
+
+.oj-tabs-horizontal .oj-tabs-tab.oj-hover,
+.oj-tabbar-horizontal .oj-tabbar-item.oj-hover {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 2px #0070D2 solid!important; /* Primary UI Color  */
+    padding-top: 0px!important;
+}
+
+.oj-tabbar-horizontal ul.oj-tabbar-element {
+    border-color: #dddbda!important;
+    border-width: 0 0 1px 0!important;
+    border-style: solid!important;
+}
+
+.oj-tabs-horizontal li.oj-selected,
+.oj-tabs-horizontal li.oj-selected.oj-hover,
+.oj-tabbar-horizontal li.oj-selected.oj-hover,
+.oj-tabbar-horizontal li.oj-selected {
+    border-width: 0 0 3px 0;
+    border-radius: 0 0 0 0;
+    border-bottom: 3px #0070D2 solid!important; /* Primary UI Color  */
+    background: none repeat scroll 0 0 #ffffff!important;
+    padding-top: 0px;
+}
+
+.oj-tabs-horizontal .oj-tabs-tab-content,
+.oj-tabbar-horizontal .oj-tabbar-item.oj-selected .oj-tabs-tab-content {
+    border-width: 0 0 0 0!important;
+}
+
+.oj-tabs-vertical .oj-tabs-tab,
+.oj-tabbar-vertical .oj-tabbar-item {
+    border-width: 0 3px 0 0!important;
+    border-radius: 0 0 0 0;
+    font-size: 14px;
+  	height: 36px;
+    padding-top: 1px;
+}
+	
+.oj-tabs-vertical .oj-tabs-tab-content {
+    border-width: 0!important;;
+}
+
+.oj-tabs-vertical > .oj-tabs-nav-root {
+    padding-top: 0;
+}
+
+.oj-tabs-vertical .oj-tabs-tab.oj-hover,
+.oj-tabbar-vertical .oj-tabbar-item.oj-hover {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-right: 2px #0070D2 solid!important; /* Primary UI Color  */
+    margin-right: -1px;
+}
+
+.oj-tabs-vertical .oj-tabs-tab.oj-selected.oj-hover,
+.oj-tabs-vertical .oj-tabs-tab.oj-selected,
+.oj-tabbar-vertical li.oj-selected.oj-hover,
+.oj-tabbar-vertical li.oj-selected {
+    border-width: 0 3px 0 0!important;
+    border-radius: 0 0 0 0;
+    border-right: 3px #0070D2 solid!important; /* Primary UI Color  */
+    background: none repeat scroll 0 0 #FFFFFF!important;
+    padding-top: 0px;
+}
+
+.oj-tabs-title,
+.oj-tabbar-item-label {
+    color: #080707!important;
+    font-weight: 400;
+	text-decoration: none!important;
+	font-family: "Salesforce Sans", Arial, sans-serif!important; /* Primary Font  */
+    font-size: 14px!important;
+}
+
+.oj-selected .oj-tabs-title,
+.oj-selected .oj-tabbar-item-label {
+    font-weight: 700!important;
+}
+
+.oj-tabbar-divider {
+    display: none!important;
+}
+
+/* Table styling
+-------------------------------------------------------------*/
+/* Shading for read-only content in an editable table, such as the Line Item table */
+.oj-table-data-cell.oj-read-only {
+    background-color: #f4f4f4;
+}
+
+.oj-table-column-header-cell {
+    background: #f4f4f4;
+    padding: 8px 0;
+    border: 1px solid;
+    border-color: #dddbda #f4f4f4!important; /* Primary Border Style  */
+    color: #080707!important;  /* Heading Text Color  */
+    font-weight: 400;
+    font-size: 12px!important; 
+    text-transform: uppercase;
+}
+
+.sticky #table-toolbar{
+margin-top: 25px;
+}
+
+.sticky #table-toolbar {
+    margin-top: 0px;
+}
+
+/* Custom Classes - Add these classes into the Layout Editor for specialized styling. 
+-----------------------------------------------------------------------------------* /
+
+/* Disables Responsive behavior, useful for creating fixed content such as columns of related data */
+.chartcol{
+	min-width:100px; /* creates fixed columns */
+}
+
+.panel-col{
+    overflow: hidden;
+}
+
+#configuration .oj-form.panel-col:NOT(:first-child){
+    padding-left: 10px;
+}
+
+/* Adds upper line for subtotals */
+.subtotal{
+	border-top: 1px solid #dddbda; /* Primary Border Style  */
+    margin: 0 5px 0px 0;
+}
+
